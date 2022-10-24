@@ -1,4 +1,4 @@
-package net.denis.membuilder
+package net.denis.memebuilder
 
 import org.junit.Test
 

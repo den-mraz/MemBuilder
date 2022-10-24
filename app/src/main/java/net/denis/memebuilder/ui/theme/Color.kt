@@ -1,4 +1,4 @@
-package net.denis.membuilder.ui.theme
+package net.denis.memebuilder.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
