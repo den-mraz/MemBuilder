@@ -13,29 +13,28 @@ import retrofit2.converter.gson.GsonConverterFactory
 val networkModule = module {
 
     single {
-        provideRetrofit(
-            gson = get(),
-            okHttpClient = get()
-        )
+        Retrofit.Builder()
+            .baseUrl(BASE_URL_JSONPLACEHOLDER)
+            .client(OkHttpClient())
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(GenerateMemeApi::class.java)
     }
 
-    factory {
-        provideGson()
-    }
+//    single {
+//        provideGson()
+//    }
+//
+//    factory {
+//        provideHttpLoggingInterceptor()
+//    }
+//
+//    factory {
+//        provideOkHttpClient(
+//            httpLoggingInterceptor = get()
+//        )
+//    }
 
-    factory {
-        provideHttpLoggingInterceptor()
-    }
-
-    factory {
-        provideOkHttpClient(
-            httpLoggingInterceptor = get()
-        )
-    }
-
-    single {
-        GenerateMemeApi
-    }
 }
 
 fun provideRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit {
