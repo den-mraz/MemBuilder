@@ -7,5 +7,5 @@ object CONST {
     private const val BASE_URL = "https://memebuild.com/api/1.0/"
     const val GENERATE_MEME = "$BASE_URL/generateMeme"
 
-    const val BASE_URL_JSONPLACEHOLDER = "https://jsonplaceholder.typicode.com/posts"
+    const val BASE_URL_JSONPLACEHOLDER = "https://jsonplaceholder.typicode.com/"
 }

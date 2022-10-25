@@ -22,14 +22,18 @@ val networkModule = module {
     }
 
 //    single {
+//        provideRetrofit(get(),get())
+//    }
+//
+//    single {
 //        provideGson()
 //    }
 //
-//    factory {
+//    single {
 //        provideHttpLoggingInterceptor()
 //    }
 //
-//    factory {
+//    single {
 //        provideOkHttpClient(
 //            httpLoggingInterceptor = get()
 //        )

@@ -5,6 +5,8 @@ import org.koin.dsl.module
 
 val featuresModule = module {
 
-    factory<GetPostUseCase> { GetPostUseCase(repository = get()) }
+    single {
+        GetPostUseCase(repository = get())
+    }
 
 }
