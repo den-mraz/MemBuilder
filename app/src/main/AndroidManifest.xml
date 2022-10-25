@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="net.denis.memebuilder">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="net.denis.memebuilder.di.MemeBuilderApplication"
@@ -17,7 +17,7 @@
         android:theme="@style/Theme.MemeBuilder"
         tools:targetApi="31">
         <activity
-            android:name="net.denis.memebuilder.MainActivity"
+            android:name="net.denis.memebuilder.presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MemeBuilder">
@@ -27,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
