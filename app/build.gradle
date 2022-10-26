@@ -5,7 +5,8 @@ plugins {
     id 'kotlin-android'
     id 'realm-android'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
-
+    id 'com.google.dagger.hilt.android'
+    id 'com.google.devtools.ksp' version '1.6.10-1.0.2'
 }
 
 android {
@@ -53,12 +54,17 @@ android {
 
 dependencies {
 
-    // DI
-    implementation "io.insert-koin:koin-core:$koin_version"
-    implementation "io.insert-koin:koin-android:$koin_android_version"
-    implementation "io.insert-koin:koin-androidx-workmanager:$koin_android_version"
-    implementation "io.insert-koin:koin-androidx-navigation:$koin_android_version"
-    implementation "io.insert-koin:koin-androidx-compose:$koin_android_compose_version"
+    // DI Koin
+//    implementation "io.insert-koin:koin-core:$koin_version"
+//    implementation "io.insert-koin:koin-android:$koin_android_version"
+//    implementation "io.insert-koin:koin-androidx-workmanager:$koin_android_version"
+//    implementation "io.insert-koin:koin-androidx-navigation:$koin_android_version"
+//    implementation "io.insert-koin:koin-androidx-compose:$koin_android_compose_version"
+
+    // DI Dagger-Hilt
+    implementation "com.google.dagger:hilt-android:$dagger_hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$dagger_hilt_version"
+
 
     // Database
 
@@ -81,8 +87,8 @@ dependencies {
 
     // Mvvm, Lifecycle
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    //implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-    //implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
 
     // JC
@@ -93,7 +99,8 @@ dependencies {
 
     // Common
     implementation "androidx.core:core-ktx:$ktx_version"
-
+    implementation "io.github.raamcosta.compose-destinations:core:1.1.2-beta"
+    ksp "io.github.raamcosta.compose-destinations:ksp:1.1.2-beta"
 
     // Testing
     testImplementation "junit:junit:$junit4"

@@ -1,6 +1,6 @@
 package net.denis.memebuilder.features.model
 
-data class ResponseData(
+data class DomainData(
     val titleTest: String,
     val bodyTest: String
 )

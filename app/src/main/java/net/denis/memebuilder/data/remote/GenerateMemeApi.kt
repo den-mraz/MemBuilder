@@ -1,6 +1,7 @@
 package net.denis.memebuilder.data.remote
 
 import net.denis.memebuilder.data.remote.dto.PostDto
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
