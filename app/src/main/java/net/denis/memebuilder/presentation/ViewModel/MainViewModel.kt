@@ -34,6 +34,10 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    init {
+        getPostListing()
+    }
+
     private fun getPostListing(
         fetchFromRemote: Boolean = false
     ) {
